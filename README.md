@@ -42,7 +42,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 }
 ```
 
-`Base64`加密后，就变成了:
+`Base64`编码（非加密）后，就变成了:
 ```
 eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ
 ```
@@ -56,7 +56,7 @@ eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ
 - `Payload`
 - 一个自定义的秘钥
 
-接受到JWT后，利用相同的信息再计算一次签名，然年与JWT中的签名对比，如果不相同则说明JWT中的内容被篡改。
+接收到JWT后，利用相同的信息再计算一次签名，然年与JWT中的签名对比，如果不相同则说明JWT中的内容被篡改。
 
 ## 解码后的JWT
 
@@ -64,7 +64,7 @@ eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ
 
 将上面三部分都编码后再合在一起就得到了JWT。
 
-需要注意的是，**JWT的内容并不是加密的，只是简单的`Base64`编码。**也就是说，JWT一旦泄露，里面的信息可以被轻松获取，因此不应该用JWT保存任何敏感信息。
+需要注意的是，**JWT的内容并不是加密的，只是简单的`Base64`编码。** 也就是说，JWT一旦泄露，里面的信息可以被轻松获取，因此不应该用JWT保存任何敏感信息。
 
 
 # JWT是怎样工作的
