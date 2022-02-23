@@ -25,7 +25,7 @@ JWT由三部分组成，用`.`分割开。
 }
 ```
 
-`Base64`加密后，就变成了:
+`Base64`编码（非加密）后，就变成了:
 ```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 ```
